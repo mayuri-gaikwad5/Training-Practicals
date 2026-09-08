@@ -1,12 +1,11 @@
-// Importing the Keeping Components Pure practical.
-import TeaSet from "./practice_ReactJSX/07-KeepingComponentsPure";
-
+import Student from './React_components/student.jsx'// use your actual folder path
 
 function App() {
-
-  // Displaying the TeaSet component.
-  return <TeaSet />;
+  return (
+    <div>
+      <Student name="Rahul" roll={100+2} />
+    </div>
+  )
 }
 
-
-export default App;
+export default App
