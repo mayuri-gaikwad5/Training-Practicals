@@ -1,9 +1,12 @@
-import Student from './React_components/student.jsx'// use your actual folder path
+import Student1 from './React_components/studen1.jsx'// use your actual folder path
 
-function App() {
+const App = () => {
   return (
     <div>
-      <Student name="Rahul" roll={100+2} />
+      <Student1  name="Rahul"/>
+      <Student1 name="Mayuri"/>
+      <Student1 name="Soham"/>
+      
     </div>
   )
 }
