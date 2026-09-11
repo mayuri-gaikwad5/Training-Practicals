@@ -52,3 +52,20 @@ const Student1=(props) =>{
     return <h1>Hello {props.name}</h1>;
 };
 export default Student1;
+
+// run the below code in app.jsx file to see the output
+
+// import Student1 from './React_components/studen1.jsx'// use your actual folder path
+
+// const App = () => {
+//   return (
+//     <div>
+//       <Student1  name="Rahul"/>
+//       <Student1 name="Mayuri"/>
+//       <Student1 name="Soham"/>
+      
+//     </div>
+//   )
+// }
+
+// export default App

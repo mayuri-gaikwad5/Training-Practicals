@@ -1,14 +1,17 @@
-import Student1 from './React_components/studen1.jsx'// use your actual folder path
 
-const App = () => {
-  return (
-    <div>
-      <Student1  name="Rahul"/>
-      <Student1 name="Mayuri"/>
-      <Student1 name="Soham"/>
-      
-    </div>
-  )
+
+import React, { Component } from "react";
+import User from "./List_Key_ref/user.jsx";
+export default class App extends Component {
+  render() {
+    const arr =this.props.number;
+    const newArr = arr.map((num)=>{
+      return <User key={num} value={num} />
+    }); 
+    return (
+        <div>
+          {newArr}
+        </div>
+    )
+  } 
 }
-
-export default App
