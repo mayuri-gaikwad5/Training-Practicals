@@ -1,17 +1,12 @@
-
-
-import React, { Component } from "react";
-import User from "./List_Key_ref/user.jsx";
-export default class App extends Component {
-  render() {
-    const arr =this.props.number;
-    const newArr = arr.map((num)=>{
-      return <User key={num} value={num} />
-    }); 
-    return (
-        <div>
-          {newArr}
-        </div>
-    )
-  } 
+import React from "react";
+import useCustomCounter from "./Hooks/custom";
+function App(){
+  const data = useCustomCounter();
+  return (
+    <React.Fragment>
+      <h1>Count Up :{data.count}</h1>
+      <button type="button" onClick={data.handleIncrement}>Increment</button>
+    </React.Fragment>
+  );
 }
+export default App;
