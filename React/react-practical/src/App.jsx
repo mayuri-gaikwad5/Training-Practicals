@@ -1,12 +1,30 @@
-import React from "react";
-import useCustomCounter from "./Hooks/custom";
-function App(){
-  const data = useCustomCounter();
+import { useState } from 'react';
+import Modal from './modal';
+
+function App() {
+  const [showModal, setShowModal] = useState(false);
+
+  console.log('showModal:', showModal);
+
   return (
-    <React.Fragment>
-      <h1>Count Up :{data.count}</h1>
-      <button type="button" onClick={data.handleIncrement}>Increment</button>
-    </React.Fragment>
+    <div>
+      <h1>React Portals</h1>
+
+      <button onClick={() => setShowModal(true)}>
+        Open Modal
+      </button>
+
+      {showModal && (
+        <Modal>
+          <h2>Hello from Portal!</h2>
+
+          <button onClick={() => setShowModal(false)}>
+            Close
+          </button>
+        </Modal>
+      )}
+    </div>
   );
 }
+
 export default App;
