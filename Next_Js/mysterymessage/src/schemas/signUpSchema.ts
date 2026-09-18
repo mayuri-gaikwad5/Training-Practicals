@@ -1,6 +1,6 @@
 import {z} from 'zod'
 
-export const usernamevalidation =z
+export const usernameValidation =z
 .string()
 .min(2,"username must be atleast 2 characters")
 .max(20,"username must be below 20 characters")
@@ -8,7 +8,7 @@ export const usernamevalidation =z
 
 export const signUpSchema = z.object(
     {
-       username: usernamevalidation,
+       username: usernameValidation,
        email:z.string().email({message:'Invalid email address'}),
        password:z.string().min(6,{message:"password must be atleast 6 characters"})
     }
