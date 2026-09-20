@@ -73,7 +73,7 @@ export default function SignUpPage() {
     } catch (error) {
       console.error("Error in signup of user", error)
       const axiosError = error as AxiosError<ApiResponse>
-      const errorMessage = axiosError.response?.data.message
+      let errorMessage = axiosError.response?.data.message
       toast.error("Signup failed", {
         description: errorMessage ?? "Something went wrong",
       })

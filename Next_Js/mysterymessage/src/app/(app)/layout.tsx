@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import { Inter, Geist } from 'next/font/google';
-import './globals.css';
-import AuthProvider from '../context/AuthProvider';
+import '../globals.css';
+
 import { cn } from "@/lib/utils";
-import { Toaster } from "sonner"
+
 import Navbar from '@/components/Navbar';
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
@@ -22,13 +22,13 @@ interface RootLayoutProps {
 export default async function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={cn("font-sans", geist.variable)} >
-      <AuthProvider>
+      
         <body className={inter.className}>
           <Navbar />
           {children}
-          <Toaster/>
+          
         </body>
-      </AuthProvider>
+      
     </html>
   );
 }
