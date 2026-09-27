@@ -1,0 +1,26 @@
+// JSON Data Types
+
+const data = {
+    name: "John",
+    age: 30,
+    isStudent: true,
+    skills: ["JavaScript", "Python"],
+    address: {
+        city: "New York"
+    },
+    middleName: null
+};
+
+console.log(data);
+
+
+console.log(data.name);
+console.log(data.age);
+console.log(data.isStudent);
+console.log(data.skills);
+console.log(data.address);
+console.log(data.middleName);
+
+const jsonData = JSON.stringify(data, null, 2);
+
+console.log(jsonData);
