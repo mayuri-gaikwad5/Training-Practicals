@@ -1,0 +1,5 @@
+Asynchronous and Synchronous
+
+In Synchronous operations tasks are performed one at a time
+In Asynchronous, second task do not wait to finish first task
+
