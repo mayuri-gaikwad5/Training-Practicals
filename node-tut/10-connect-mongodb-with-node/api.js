@@ -1,5 +1,6 @@
-const express = require('express');
 const dbConnect = require('./mongodb');
+const mongodb = require('mongodb');
+const express = require('express');
 const app = express();
 
 app.use(express.json());
@@ -25,6 +26,15 @@ app.post('/', async (req, resp) => {
 
     resp.send(result);
 });
+
+app.delete('/:id', async (req, resp) => {
+    console.log(req.params.id);
+    const data = await dbConnect();
+    const result = await data.deleteOne({
+        _id: new mongodb.ObjectId(req.params.id)
+    });
+    resp.send("done")
+})
 
 app.listen(5000, () => {
     console.log('Server is running on port 5000');
