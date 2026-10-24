@@ -1,0 +1,22 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+plt.close("all")
+
+# Create a time series with 1000 random values
+ts = pd.Series(
+    np.random.randn(1000),
+    index=pd.date_range("1/1/2000", periods=1000)
+)
+
+# Calculate cumulative sums
+ts = ts.cumsum()
+
+# Plot the time series
+ts.plot(title="Cumulative Sum of Random Values")
+
+plt.xlabel("Date")
+plt.ylabel("Cumulative Sum")
+plt.tight_layout()
+plt.show()
